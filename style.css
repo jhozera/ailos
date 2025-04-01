@@ -804,14 +804,14 @@ button:focus {
   
 
 @media (min-width:1300px){
-    .banner-mobile{
+    .topnav{
         display: none;
     }
 
 }
 
 @media (min-width: 1025px) and (max-width:1299px){
-    .banner-mobile{
+    .topnav{
         display: none;
     }
 
@@ -819,7 +819,7 @@ button:focus {
 }
 
 @media  (min-width: 769px) and (max-width:1024px){
-    .banner-mobile{
+    .topnav{
         display: none;
     }
     
@@ -896,26 +896,27 @@ button:focus {
     .banner-app img{
         width: 100%;
     }
+
 }
 
 @media (max-width: 480px) {
     .text{
-        padding: 20px;
+        padding: 35px;
     }
 
     .textt{
-        padding: 20px;
+        padding: 35px;
     }
 
     .texte{
-        padding: 20px;
+        padding: 35px;
     }
 
     .textte{
-        padding: 20px;
+        padding: 35px;
     }
 
     .textte a{
-        width: 50%;
+        padding: 35px;
     }
 }
