@@ -752,10 +752,7 @@ button:focus {
     width: 100%;
   }
   
-  .logo {
-    height: 40px;
-  }
-  
+
   .icon {
     font-size: 30px;
     color: #fa6300;
@@ -901,3 +898,24 @@ button:focus {
     }
 }
 
+@media (max-width: 480px) {
+    .text{
+        padding: 20px;
+    }
+
+    .textt{
+        padding: 20px;
+    }
+
+    .texte{
+        padding: 20px;
+    }
+
+    .textte{
+        padding: 20px;
+    }
+
+    .textte a{
+        width: 50%;
+    }
+}
