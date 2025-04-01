@@ -167,7 +167,7 @@ body {
 .cartoes{
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
     background-color: #004869;
     gap: 150px;
 }
@@ -188,7 +188,7 @@ body {
     gap: 20px;
     color: #fff;
     font-family: 'Montserrat', Arial, sans-serif;
-    padding: 40px;
+    padding: 100px;
 }
 
 
@@ -398,10 +398,11 @@ footer {
     flex-wrap: wrap;
     margin-top: 20px;
     transition: transform 0.3s ease; 
+    padding: 25px;
 
 }
 
-.rural1, .rural2 {
+.rural1, .rural2, .rural3, .rural4 {
     position: relative;
     flex: 1;
     max-width: 40%; 
@@ -414,7 +415,7 @@ footer {
 
 }
 
-.rural1 img, .rural2 img {
+.rural1 img, .rural2 img, .rural3 img, .rural4 img {
     width: 100%;
     height: 100%;
     object-fit: cover;  
@@ -457,12 +458,12 @@ footer {
     color: #004869;
 }
 
-.rural1:hover, .rural2:hover {
+.rural1:hover, .rural2:hover, .rural3:hover, .rural4:hover {
     transform: scale(1.05); 
     transition: 1.0s;
 }
 
-.rural1:hover img, .rural2:hover img {
+.rural1:hover img, .rural2:hover img, .rural3:hover img, .rural4:hover img {
     transform: scale(1.1);  
     transition: 1.0s;
 
@@ -510,27 +511,178 @@ footer {
 }
 
 
-/* Define o tamanho da barra de rolagem */
 ::-webkit-scrollbar {
-    width: 12px; /* largura da barra de rolagem vertical */
-    height: 12px; /* altura da barra de rolagem horizontal */
+    width: 12px; 
+    height: 12px; 
 }
 
-/* Define o estilo da parte da barra de rolagem que é movida */
 ::-webkit-scrollbar-thumb {
-    background-color: #f39c12; /* cor do polegar */
+    background-color: #f39c12; 
 }
 
-/* Define o estilo da parte da barra de rolagem que não é movida */
 ::-webkit-scrollbar-track {
-    background-color: #f1f1f1; /* cor da trilha */
+    background-color: #f1f1f1; 
 }
 
-/* Adiciona efeito de hover ao polegar */
 ::-webkit-scrollbar-thumb:hover {
     background-color: #004869;
 }
 
+.banner-desp {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    height: 60vh;
+    overflow: hidden;
+}
+
+.banner-desp img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.banner-desp::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2); 
+}
+
+.texte {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    color: #fff;
+    font-family: 'Montserrat', Arial, sans-serif;
+    padding: 100px;
+    z-index: 1; 
+}
+
+.texte h1 {
+    font-size: 30px;
+}
+
+.texte a {
+    display: flex;
+    color: #fff;
+    border-radius: 20px;
+    background-color: #ffa300;
+    text-decoration: none;
+    width: 180px;
+    height: 40px;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.texte a:hover {
+    background-color: #0e9bdd;
+}
+
+.banner-mobile {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    height: 60vh;
+    overflow: hidden;
+}
+
+.banner-mobile img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.banner-mobile::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2); 
+}
+
+.banner-app{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff;
+    gap: 150px;
+}
+
+.banner-app img{
+    width: 30%;
+    transition: transform 0.5s ease;
+}
+
+.textte{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    color: #004869;
+    font-family: 'Montserrat', Arial, sans-serif;
+    padding: 100px;
+}
+
+
+.textte h2{
+    font-size: 30px;
+}
+/* 
+.textte a{
+    display: flex;
+    color: #fff;
+    border-radius: 20px;
+    background-color: #ffa300;
+    text-decoration: none;
+    width: 180px;
+    height: 40px;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 20px;
+} */
+
+.textte a:hover{
+    transform: scale(1.05); 
+    transition: 1.0s;
+}
+
+
+
+@media (min-width:1300px){
+    .banner-mobile{
+        display: none;
+    }
+}
+
+@media (min-width: 1025px) and (max-width:1299px){
+    .banner-mobile{
+        display: none;
+    }
+}
+
+@media  (min-width: 769px) and (max-width:1024px){
+    .banner-mobile{
+        display: none;
+    }
+    
+    
+}
 
 @media (max-width: 768px) {
     .rural {
@@ -538,14 +690,13 @@ footer {
         align-items: center;
     }
 
-    .rural1, .rural2 {
+    .rural1, .rural2, .rural3, .rural4 {
         max-width: 80%;
         height: 250px;  
     }
-}
 
-@media (max-width: 768px) {
     .box {
         width: 100%;
     }
 }
+
