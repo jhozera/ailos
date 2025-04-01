@@ -741,7 +741,7 @@ button:focus {
 }
 
 .topnav {
-    background-color: #ffffff;
+    background-color: #ffffff; 
     overflow: hidden;
     display: flex;
     justify-content: space-between;
@@ -749,26 +749,28 @@ button:focus {
     padding: 10px;
     position: fixed;
     z-index: 1000;
-    width: 100%;
+    width: 100%; 
   }
   
-
   .icon {
     font-size: 30px;
     color: #fa6300;
     cursor: pointer;
+    text-decoration: none; 
+    border: none;
+    background: none; 
+    outline: none; 
   }
   
-
   .menu-sidebar {
     height: 100%;
     width: 250px; 
     position: fixed;
     top: 0;
-    left: -250px;
+    left: -250px; 
     background-color: #fa6300;
     overflow-x: hidden;
-    transition: 0.4s ease-in-out; 
+    transition: left 0.4s ease-in-out, opacity 0.4s ease-in-out; 
     padding-top: 60px;
     display: flex;
     flex-direction: column;
@@ -798,13 +800,16 @@ button:focus {
   .menu-sidebar.open {
     left: 0; 
     opacity: 1; 
-    visibility: visible;
+    visibility: visible; 
   }
-  
   
 
 @media (min-width:1300px){
     .topnav{
+        display: none;
+    }
+
+    .banner-mobile{
         display: none;
     }
 
@@ -815,11 +820,19 @@ button:focus {
         display: none;
     }
 
+    .banner-mobile{
+        display: none;
+    }
+
   
 }
 
 @media  (min-width: 769px) and (max-width:1024px){
     .topnav{
+        display: none;
+    }
+
+    .banner-mobile{
         display: none;
     }
     
