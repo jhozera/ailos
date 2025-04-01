@@ -740,36 +740,85 @@ button:focus {
     box-shadow: 0 0 5px #fa6300;
 }
 
-@media (max-width: 768px) {
-    #button-ft {
-        padding: 20px;
-    }
+.topnav {
+    background-color: #ffffff;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
+  }
+  
+  .logo {
+    height: 40px;
+  }
+  
+  .icon {
+    font-size: 30px;
+    color: #fa6300;
+    cursor: pointer;
+  }
+  
 
-    .button-ti {
-        font-size: 20px;
-    }
-
-    .button-pt {
-        padding: 15px;
-    }
-
-    .txt-bu-ti {
-        font-size: 16px;
-    }
-}
-
-
+  .menu-sidebar {
+    height: 100%;
+    width: 250px; 
+    position: fixed;
+    top: 0;
+    left: -250px;
+    background-color: #fa6300;
+    overflow-x: hidden;
+    transition: 0.4s ease-in-out; 
+    padding-top: 60px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    z-index: 1000;
+    opacity: 0; 
+    visibility: hidden; 
+  }
+  
+  .menu-sidebar a {
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #fff;
+    display: block;
+    transition: 0.3s;
+    font-family: "Montserrat", sans-serif;
+  }
+  
+  .closebtn {
+    font-size: 36px;
+    color: #fa6300;
+    text-align: center;
+    cursor: pointer;
+  }
+  
+  .menu-sidebar.open {
+    left: 0; 
+    opacity: 1; 
+    visibility: visible;
+  }
+  
+  
 
 @media (min-width:1300px){
     .banner-mobile{
         display: none;
     }
+
 }
 
 @media (min-width: 1025px) and (max-width:1299px){
     .banner-mobile{
         display: none;
     }
+
+  
 }
 
 @media  (min-width: 769px) and (max-width:1024px){
@@ -809,6 +858,46 @@ button:focus {
 
     .txt-bu-ti {
         font-size: 16px;
+    }
+
+    #button-ft {
+        padding: 20px;
+    }
+
+    .button-ti {
+        font-size: 20px;
+    }
+
+    .button-pt {
+        padding: 15px;
+    }
+
+    .txt-bu-ti {
+        font-size: 16px;
+    }
+
+    .navegation{
+        display: none;
+    }
+
+    .cartoes{
+        flex-direction: column;
+    }
+
+    .cartoes img{
+        width: 100%;
+    }
+
+    .banner-desp{
+        display: none;
+    }
+
+    .banner-app{
+        flex-direction: column;
+    }
+
+    .banner-app img{
+        width: 100%;
     }
 }
 

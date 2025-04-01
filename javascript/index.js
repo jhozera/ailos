@@ -81,3 +81,15 @@ function showContente(id) {
         content.style.display = "none";
     }
   }
+
+
+
+
+function openMenu() {
+    document.getElementById("myLinks").classList.add("open");
+  }
+  
+  function closeMenu() {
+    document.getElementById("myLinks").classList.remove("open");
+  }
+  
