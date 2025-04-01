@@ -47,28 +47,53 @@ body {
     transition: 0.3s;
 }
 
-.banner{
+
+.banner {
+    position: relative;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    background-color: #004869;
+    justify-content: center;
+    color: white;
+    height: 60vh;
+    overflow: hidden;
+    padding-top: 50px;
 }
 
+.banner img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
 
-.text{
+/* Filtro escuro na imagem */
+.banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2); /* Cor preta com opacidade */
+    z-index: 0;
+}
+
+.text {
     display: flex;
     flex-direction: column;
     gap: 20px;
     color: #fff;
     font-family: 'Montserrat', Arial, sans-serif;
     padding: 100px;
+    z-index: 1; /* Garante que o texto e os links apareçam sobre a imagem e o filtro */
 }
 
-.text h1{
+.text h1 {
     font-size: 30px;
 }
 
-.text a{
+.text a {
     display: flex;
     color: #fff;
     border-radius: 20px;
@@ -82,17 +107,14 @@ body {
     font-size: 20px;
 }
 
-.text a:hover{
+.text a:hover {
     background-color: #0e9bdd;
-    transition: 0.3s;
 }
 
 .banner-be {
-    background-color: #f4f7fb;
     padding: 40px 20px;
     text-align: center;
     border-radius: 10px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
 .banner-be h4 {
@@ -277,3 +299,253 @@ footer {
   .footer-bottom a:hover {
     color: #f39c12;
   }
+  .carousel-container {
+    position: relative;
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    will-change: transform;
+}
+.carousel img {
+    width: 200px;
+    margin: 10px;
+    border-radius: 10px;
+    flex-shrink: 0;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    font-family: 'Montserrat', Arial, sans-serif;
+
+}
+.box {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    border: 2px solid #e0e0e0;
+    width: 500px;
+    height: 480px;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+}
+.box img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.box-content {
+    padding: 20px;
+}
+.box h3 {
+    color: #005fa3;
+    margin: 0 0 10px;
+    font-size: 1.2em;
+    padding: 20px;
+}
+.box p {
+    color: #555;
+    font-size: 14px;
+    margin-bottom: 15px;
+    padding: 20px;
+
+}
+.box a {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #ff7f00;
+    color: #fff;
+    border-radius: 40px;
+    text-decoration: none;
+    font-weight: bold;
+    font-family: 'Montserrat', Arial, sans-serif;
+    display: flex;
+    width: 200px;
+    margin: 20px;
+
+}
+.box a:hover {
+    background-color: #004869;
+    color: white;
+    transition: 0.3s;
+}
+
+.rural-section {
+    padding: 40px 0;
+    text-align: center;
+    font-family: 'Montserrat', Arial, sans-serif;
+
+}
+
+.rural {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    transition: transform 0.3s ease; 
+
+}
+
+.rural1, .rural2 {
+    position: relative;
+    flex: 1;
+    max-width: 40%; 
+    height: 300px;  
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px; 
+    transition: transform 0.3s ease;  
+
+}
+
+.rural1 img, .rural2 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;  
+    display: block;
+    transition: transform 0.3s ease;  
+}
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 15px;
+    text-align: center;
+    width: 100%;
+}
+
+.overlay h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.overlay p {
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+}
+
+.overlay a {
+    color: #ffd700;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.overlay a:hover {
+    color: #004869;
+}
+
+.rural1:hover, .rural2:hover {
+    transform: scale(1.05); 
+    transition: 1.0s;
+}
+
+.rural1:hover img, .rural2:hover img {
+    transform: scale(1.1);  
+    transition: 1.0s;
+
+}
+
+.rural-section h5{
+    color: #004869;
+    font-size: 30px;
+    font-family: 'Montserrat', Arial, sans-serif;
+    padding: 40px;
+
+}
+
+
+.deal-ailos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    padding: 50px;
+    /* box-shadow: -1px 3px 13px -6px; */
+}
+
+.deal-ic {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 30px;
+    gap: 35px;
+    height: auto;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.deal-box {
+    color: #fa6300;
+    border-radius: 25px;
+    font-family: 'Montserrat', Arial, sans-serif;
+
+}
+
+.deal-box:hover{
+    color: #004869;
+}
+
+
+/* Define o tamanho da barra de rolagem */
+::-webkit-scrollbar {
+    width: 12px; /* largura da barra de rolagem vertical */
+    height: 12px; /* altura da barra de rolagem horizontal */
+}
+
+/* Define o estilo da parte da barra de rolagem que é movida */
+::-webkit-scrollbar-thumb {
+    background-color: #f39c12; /* cor do polegar */
+}
+
+/* Define o estilo da parte da barra de rolagem que não é movida */
+::-webkit-scrollbar-track {
+    background-color: #f1f1f1; /* cor da trilha */
+}
+
+/* Adiciona efeito de hover ao polegar */
+::-webkit-scrollbar-thumb:hover {
+    background-color: #004869;
+}
+
+
+@media (max-width: 768px) {
+    .rural {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .rural1, .rural2 {
+        max-width: 80%;
+        height: 250px;  
+    }
+}
+
+@media (max-width: 768px) {
+    .box {
+        width: 100%;
+    }
+}
