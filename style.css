@@ -75,7 +75,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.2); /* Cor preta com opacidade */
+    background-color: rgba(0, 0, 0, 0.2); 
     z-index: 0;
 }
 
@@ -86,7 +86,7 @@ body {
     color: #fff;
     font-family: 'Montserrat', Arial, sans-serif;
     padding: 100px;
-    z-index: 1; /* Garante que o texto e os links apareçam sobre a imagem e o filtro */
+    z-index: 1; 
 }
 
 .text h1 {
