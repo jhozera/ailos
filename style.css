@@ -353,7 +353,8 @@ footer {
     color: #005fa3;
 }
 
-/* .boxx{
+
+.boxx {
     background: white;
     border-radius: 10px;
     overflow: hidden;
@@ -361,7 +362,7 @@ footer {
     text-align: left;
     border: 2px solid #e0e0e0;
     width: 300px;
-    height: 500px;
+    height: 545px;
     min-width: 300px;
     display: flex;
     flex-direction: column;
@@ -375,7 +376,6 @@ footer {
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
 }
-
 .boxx-content {
     padding: 20px;
 }
@@ -395,7 +395,7 @@ footer {
 .boxx a {
     display: inline-block;
     padding: 10px 15px;
-    background-color: #ff7f00;
+    background-color: #00ae40;
     color: #fff;
     border-radius: 40px;
     text-decoration: none;
@@ -410,7 +410,8 @@ footer {
     background-color: #004869;
     color: white;
     transition: 0.3s;
-} */
+}
+
 
 
 
@@ -892,7 +893,7 @@ button:focus {
     opacity: 1; 
     visibility: visible; 
   }
-  
+
 
 @media (min-width:1300px){
     .topnav{
@@ -943,6 +944,11 @@ button:focus {
     .box {
         width: 100%;
     }
+
+    .boxx {
+        width: 100%;
+    }
+
 
     #button-ft {
         padding: 20px;
