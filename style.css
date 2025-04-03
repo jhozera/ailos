@@ -619,6 +619,71 @@ footer {
     background-color: #004869;
 }
 
+
+.banner-jud {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    height: 60vh;
+    overflow: hidden;
+}
+
+.banner-jud img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.banner-jud::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2); 
+}
+
+.textet {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    color: #fff;
+    font-family: 'Montserrat', Arial, sans-serif;
+    padding: 100px;
+    z-index: 1; 
+}
+
+.textet h1 {
+    font-size: 30px;
+}
+
+.textet a {
+    display: flex;
+    color: #fff;
+    border-radius: 20px;
+    background-color: #ffa300;
+    text-decoration: none;
+    width: 220px;
+    height: 40px;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.textet a:hover {
+    background-color: #0e9bdd;
+}
+
+
+
+
+
 .banner-desp {
     position: relative;
     display: flex;
@@ -1013,6 +1078,10 @@ button:focus {
         padding: 35px;
     }
 
+    .textet{
+        padding: 35px;
+    }
+
     .textt{
         padding: 35px;
     }
@@ -1028,7 +1097,6 @@ button:focus {
     .textte a{
         padding: 35px;
     }
-
     
 .logo{
     width: 20%;
